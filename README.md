@@ -1,2 +1,1 @@
-# OpenClassroomsProject
 # openclassrooms.projet2
