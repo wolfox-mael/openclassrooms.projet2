@@ -23,14 +23,14 @@ h1 {
     height: 30px;
 }
 
-main {
+/* main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-}
+} */
 
 .logo img {
     height: 30px;
@@ -67,13 +67,13 @@ a {
 
 /* Bloc de recherche */
 
-.blocrecherche{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: stretch;
+.blocrecherche {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
     font-size: 20px;
     background-color: red;
 }
@@ -107,17 +107,6 @@ a {
         align-items: center;
         align-content: stretch;
     }
-    
-    .navigation {
-        position: relative;
-        float: right;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        gap: 50px;
-        margin-left: 919.844px
-    }
 
     .header {
         display: flex;
@@ -129,20 +118,6 @@ a {
         align-items: flex-start;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .recherche2 {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1024px), (max-width: 1400px) {
     .navigation {
         position: relative;
         float: right;
@@ -151,22 +126,44 @@ a {
         flex-wrap: nowrap;
         justify-content: flex-end;
         gap: 50px;
-        margin-left: auto;
-        margin-right: 50px;
+        margin-left: 919.844px
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        align-content: stretch;
+    }
+
+    .recherche2 {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .recherche2 {
+        display: none;
     }
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (min-width:768px), (max-width: 1024px) {
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .recherche2 {
+        display: none;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .recherche1 {
         display: none;
     }
+
     .recherche2 {
         display: block;
     }
+
 }
