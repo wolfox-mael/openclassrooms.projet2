@@ -1,3 +1,172 @@
+/* Global */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin-left: 50px;
+}
+
+p {
+    font-size: 13px;
+}
+
 h1 {
-    color:red;
+    font-size: 20px;
+}
+
+/* En tête */
+
+.header {
+    display: flex;
+    height: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.navigation a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px;
+}
+
+a {
+    color: black;
+}
+
+.linkalready {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+.navigation a:hover {
+    color: rgb(0, 179, 255);
+    border-top: 2px solid rgb(0, 179, 255);
+
+}
+
+/* Premier paragraphe */
+
+.title {
+    text-wrap: nowrap;
+    margin-top: 50px;
+}
+
+/* Bloc de recherche */
+
+.blocrecherche{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    font-size: 20px;
+    background-color: red;
+}
+
+.blocrecherche input {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.bouttonrecheche {
+    color: white;
+    background-color: #0065FC;
+}
+
+.inputrecheche {
+    border: none;
+}
+
+/* Bloc de filtres */
+
+/****** Media queries ***********/
+
+/* Large screens */
+@media (min-width: 1400px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+    }
+    
+    .navigation {
+        position: relative;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 50px;
+        margin-left: 919.844px
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .recherche2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px), (max-width: 1400px) {
+    .navigation {
+        position: relative;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 50px;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+}
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (min-width:768px), (max-width: 1024px) {
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 768px) {
+    .recherche1 {
+        display: none;
+    }
+    .recherche2 {
+        display: block;
+    }
 }

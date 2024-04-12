@@ -1,10 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Booki</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- En tête -->
+    <header>
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo/Booki.png" alt="Logo"></a>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <a href="hebergements" class="linkalready">Hébergements</a>
+                <a href="activites">Activités</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page en elle même -->
+    <main>
+
+        <!-- Premier paragraphe -->
+
+        <div class="title">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre de ville ou en pleine nature</p>
+        </div>
+
+        <!-- Bloc recherche -->
+        <div class="blocrecherche">
+                <i class="fa-solid fa-location-dot" id="recherchelogo"></i>
+                <form action="" method="get">
+                    <input class="inputrecheche" type="search" placeholder="Ville, Pays" value="Marseille, France" required>
+                    <input class="bouttonrecheche recherche1" type="submit" value="Rechercher">
+                    <button class="bouttonrecheche recherche2" type="submit">
+                        <i class="fa-solid fa-magnifying-glass" id="recherchelogo"></i>
+                    </button>
+
+                </form>
+        </div>
+
+        <!-- Bloc filtres -->
+        <div>
+            <ul class="filtres">
+                <p><strong>Filtres</strong></p>
+                <li class="filtre">
+                    Economiques
+                </li>
+                <li class="filtre">
+                    Famillial
+                </li>
+                <li class="filtre">
+                    Romantique
+                </li>
+                <li class="filtre">
+                    <i class="fa-solid fa-fire"></i>
+                    Nos pépites
+                </li>
+            </ul>
+        </div>
+
+        <!-- info -->
+        <div>
+
+        </div>
+
+        <!-- Bloc logements -->
+        <div class=bloclogements>
+
+            <!-- Bloc de gauche -->
+            <div class="logements gauche">
+                <!-- Titre -->
+                <h1>Hébergements à Marseille</h1>
+            </div>
+
+            <!-- Bloc de droite -->
+            <div class="logements droite">
+
+            </div>
+        </div>
+
+        <!-- Bloc activtés -->
+        <div class="blocactivites">
+
+            <!-- Titre -->
+            <h1>Activités à Marseille</h1>
+
+            <!-- Bloc interne -->
+            <div class="activites">
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+
+    </footer>
+
+</body>
+
 </html>
