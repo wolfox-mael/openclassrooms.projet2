@@ -5,32 +5,54 @@
 }
 
 body {
-    margin-left: 50px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 h1 {
     font-size: 20px;
 }
 
-/* En tête */
-
-.header {
-    display: flex;
-    height: 30px;
+h2 {
+    font-size: 16px;
 }
 
-/* main {
+/* En tête */
+
+header {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+header .navigation {
+    float: right;
+}
+
+.navigation a {
+    margin: 15px;
+}
+
+main {
+    width: 100%;
+    max-width: 1340px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-content: center;
-} */
+
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 .logo img {
     height: 30px;
@@ -68,37 +90,433 @@ a {
 /* Bloc de recherche */
 
 .blocrecherche {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    align-content: stretch;
+    align-content: stretch; */
     font-size: 20px;
-    background-color: red;
+    width: fit-content;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    gap: 0;
+    background-color: white;
+}
+
+#recherchelogo {
+    font-size: 13.5px;
+    background-color: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 12.25px;
+    object-fit: contain;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid #f2f2f2;
+}
+
+.blocrecherche form {
+    display: flex;
+    flex-direction: row;
 }
 
 .blocrecherche input {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 800;
+    background-color: white;
+    border-bottom: 2px solid #f2f2f2;
+    border-top: 2px solid #f2f2f2;
+}
 
+.inputrecheche {
+    border: none;
+    padding: 0;
+    padding-left: 20px;
 }
 
 .bouttonrecheche {
     color: white;
     background-color: #0065FC;
+    border-radius: 0px 10px 10px 0px;
+    margin: 0px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: none;
+    border-right: 2px solid #0065FC;
+    border-top: 2px solid #0065FC;
+    border-bottom: 2px solid #0065FC;
+
 }
 
-.inputrecheche {
-    border: none;
+.bouttonrecheche p {
+    font-size: 12px;
 }
+
+
 
 /* Bloc de filtres */
 
+.filtres {
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtre {
+    text-wrap: nowrap;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.filtres p {
+    font-size: 16px;
+    padding-right: 10px;
+    padding-left: 0px;
+    margin-left: 0;
+}
+
+.filtres li {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+
+.filtres li:hover {
+    background-color: #DEEBFF;
+}
+
+.filtre i {
+    color: #0065FC;
+    font-size: 16px;
+}
+
+/* Bloc info */
+
+.blocinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.blocinfo i {
+    color: #0065FC;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+/* Bloc logements */
+
+    
+
+    .bloclogements a {
+        text-decoration: none;
+    }
+
+    .bloclogements {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .euro {
+        font-weight: 700;
+    }
+
+    .titre {
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Bloc de gauche */
+
+    .bloclogements .logements {
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+
+    .bloclogements .gauche {
+        width: fit-content;
+        max-width: 75%;
+    }
+
+    .bloclogements .gauche h1 {
+        margin-left: 20px;
+    }
+
+    .bloclogements .gauche .extend {
+        margin: 0px;
+        font-size: 18px;
+    }
+
+    .bloclogements .gauche .grid {
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 700px; */
+
+        /* Tentative de grid */
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        
+        padding-bottom: 20px;
+        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .bloclogements .gauche .logement {
+        width: fit-content;
+        height: fit-content;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px rgba(114, 114, 114, 0.5);
+        padding: 0px;
+    }
+
+    .bloclogements .gauche .logement img {
+        object-fit: cover;
+        height:150px; 
+        width: 250px;
+        padding: 6px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bloclogements .gauche .logement .infos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .bloclogements .gauche .logement h2 {
+        margin: 0;
+        margin: 0;
+    }
+
+    .bloclogements .gauche .logement p {
+        margin: 0;
+        padding: 5px;
+        padding-left: 0;
+    }
+
+    .bloclogements .gauche .logement .infos .stars {
+        color: #F2F2F2;
+    }
+
+    .bloclogements .gauche .logement .infos .stars .one {
+        color: #0065FC;
+    }
+
+    .bloclogements .gauche .logement .infos .stars .two {
+        color: #0065FC;
+    }
+
+    .bloclogements .gauche .logement .infos .stars .three {
+        color: #0065FC;
+    }
+
+    .bloclogements .gauche .logement .infos .stars .four {
+        color: #0065FC;
+    }
+
+    /* Bloc de droite */
+
+    .bloclogements .droite {
+        float: right;
+        width: 550px;
+        /* CHANGE QUAND FINIT WIDTH FIT CONTENT */
+    }
+
+    .bloclogements .droite .titre {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .bloclogements .droite .chart {
+        float: right;
+        color: #0065FC;
+    }
+
+    .bloclogements .droite .logement img {
+        object-fit: cover;
+        height:150px; 
+        width: 120px;
+        padding: 6px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .bloclogements .droite .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 164px;
+        
+        padding-bottom: 5px;
+        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bloclogements .droite .logement {
+        background-color: white;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        height: 164px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px rgba(114, 114, 114, 0.5);
+        padding: 0px;
+    }
+
+    .bloclogements .droite .logement .infos {
+        float: right;
+        padding: 15px;
+        padding-bottom: 0;
+        padding-left: 5px;
+        margin: 0;
+        padding-right: 10px;
+        height: 100%;
+        position: relative;
+    }
+
+    .bloclogements .droite .logement .infos h2 {
+        margin: 0;
+        max-width: 210px;
+    }
+
+    .bloclogements .droite .logement .infos p {
+        margin: 0;
+    }
+
+    .bloclogements .droite .logement .infos .stars {
+        color: #F2F2F2;
+        margin: auto;
+        position: absolute;
+        bottom: 24px;
+    }
+
+    .bloclogements .droite .logement .infos .stars .one {
+        color: #0065FC;
+    }
+
+    .bloclogements .droite .logement .infos .stars .two {
+        color: #0065FC;
+    }
+
+    .bloclogements .droite .logement .infos .stars .three {
+        color: #0065FC;
+    }
+
+    .bloclogements .droite .logement .infos .stars .four {
+        color: #0065FC;
+    }
+
+/* Bloc Activités */
+
+.blocactivites {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.blocactivites .titre {
+    padding-bottom: 10px;
+}
+
+.blocactivites .activites {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.blocactivites .activites .activite {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(114, 114, 114, 0.5);
+}
+
+.blocactivites .activites .activite img {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.blocactivites .activites .activite h2 {
+    margin-left: 20px;
+}
+
+/* Pied de page */
+
+footer {
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+footer .grid {
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer li {
+    margin-top: 15px;
+}
+    
 /****** Media queries ***********/
 
 /* Large screens */
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
+/* 
     header {
         display: flex;
         flex-direction: column;
@@ -127,23 +545,14 @@ a {
         justify-content: flex-end;
         gap: 50px;
         margin-left: 919.844px
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: baseline;
-        align-content: stretch;
-    }
+    } */
 
     .recherche2 {
         display: none;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
     .recherche2 {
         display: none;
     }
@@ -164,6 +573,17 @@ a {
 
     .recherche2 {
         display: block;
+    }
+
+    #recherchelogo {
+        font-size: 13px;
+        background-color: #f2f2f2;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        object-fit: contain;
+        border-radius: 10px 0px 0px 10px;
+        border: 2.5px solid #f2f2f2;
     }
 
 }
