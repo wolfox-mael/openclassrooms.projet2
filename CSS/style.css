@@ -30,11 +30,11 @@ a {
 
 /* Header */
 header {
-    max-width: 1340px;
-    margin-left: 50px;
-    margin-right: 50px;
+    max-width: 100%;
     margin-top: 12px;
-    background-color: green;
+    background-color: red;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 header .logo img {
@@ -42,7 +42,7 @@ header .logo img {
 }
 
 header .navigation {
-    float: inline-end;
+    float: right;
 }
 
 header .navigation a {
@@ -433,6 +433,7 @@ main .title p {
 .blocactivites .activites .activite {
     width: 25%;
     border-radius: 20px;
+    background-color: white;
     box-shadow: 0px 0px 5px rgba(114, 114, 114, 0.5);
 }
 
@@ -481,4 +482,50 @@ footer ul {
 footer li {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+/****** Media queries ***********/
+
+/* Large screens */
+@media (min-width: 1440px) {
+    .recherche2 {
+        display: none;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .recherche2 {
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .recherche2 {
+        display: none;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+    .recherche1 {
+        display: none;
+    }
+
+    .recherche2 {
+        display: block;
+    }
+
+    #recherchelogo {
+        font-size: 13px;
+        background-color: #f2f2f2;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        object-fit: contain;
+        border-radius: 10px 0px 0px 10px;
+        border: 2.5px solid #f2f2f2;
+    }
+
 }
