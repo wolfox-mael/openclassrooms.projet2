@@ -1,6 +1,8 @@
 /* Global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "roboto", sans-serif;
 }
 
 body {
@@ -20,11 +22,15 @@ body {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 p {
@@ -60,7 +66,7 @@ header .logo img {
     margin-top: 20px;
 }
 
-header .navigation {
+header nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -70,19 +76,19 @@ header .navigation {
     width: 250px;
 }
 
-header .navigation a {
+header nav a {
     font-size: 20px;
     text-decoration: none;
     font-weight: 500;
     padding-top: 10px;
 }
 
-header .navigation .linkalready {
+header nav .linkalready {
     color: #0065fc;
     border-top: 2px solid #0065fc;
 }
 
-header .navigation a:hover {
+header nav a:hover {
     color: rgb(0, 179, 255);
     border-top: 2px solid rgb(0, 179, 255);
 }
@@ -126,10 +132,16 @@ header .navigation a:hover {
     justify-content: center;
     align-items: center;
     align-content: stretch;
+    border-top: 1px solid #f2f2f2 ;
+    border-bottom: 1px solid #f2f2f2 ;
+    border-radius: 20px;
+    border-left: 0;
+    border-right: 0;
+    position: relative;
 }
 
 .blocrecherche form .recherchelogo {
-    height: 40px;
+    height: 42px;
     width: 40px;
     text-align: center;
     display: flex;
@@ -146,15 +158,12 @@ header .navigation a:hover {
     height: 40px;
     width: 100%;
     border: 0;
-    border-top: 2px solid #f2f2f2;
-    border-bottom: 2px solid #f2f2f2;
     padding-left: 20px;
     font-size: 15px;
     font-weight: 600;
 }
 
 .blocrecherche form .bouttonrecheche {
-    height: 40px;
     min-width: 40px;
     background-color: #0065fc;
     padding-left: 10px;
@@ -165,6 +174,7 @@ header .navigation a:hover {
 }
 
 .recherche1 {
+    height: 40px;
     width: 140px;
     text-align: center;
     display: flex;
@@ -179,6 +189,9 @@ header .navigation a:hover {
 }
 
 .recherche2 {
+    position: absolute;
+    right: 0;
+    height: 42px;
     display: none;
     border: 0;
     border-radius: 10px;
@@ -483,18 +496,19 @@ footer .grid {
 
 footer a {
     text-decoration: none;
-}
-
-footer ul {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-}
-
-footer li {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+footer .liste {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
 
 /****** Media queries ***********/
 
@@ -503,8 +517,6 @@ footer li {
     .recherche2 {
         display: none;
     }
-
-    body {}
 
     .blocfiltres {
         display: flex;
@@ -523,8 +535,6 @@ footer li {
         display: none;
     }
 
-    body {}
-
 
     .blocfiltres {
         display: flex;
@@ -542,8 +552,6 @@ footer li {
     .recherche2 {
         display: none;
     }
-
-    body {}
 
     /* Bloc logements */
     /* Global */
@@ -606,7 +614,7 @@ footer li {
         padding: 0;
     }
 
-    header .navigation {
+    header nav {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -616,26 +624,26 @@ footer li {
         align-content: stretch;
     }
 
-    header .navigation a {
+    header nav a {
         width: 50%;
         text-align: center;
         border-bottom: 3px solid #f2f2f2;
         padding-bottom: 10px;
     }
 
-    header .navigation .linkalready {
+    header nav .linkalready {
         color: #0065fc;
         border-top: none;
         border-bottom: 3px solid #0065fc;
     }
 
-    header .navigation a:active {
+    header nav a:active {
         color: rgb(0, 179, 255);
         border-top: none;
         border-bottom: 3px solid rgb(0, 179, 255);
     }
 
-    header .navigation a:hover {
+    header nav a:hover {
         border-top: none;
         border-bottom: 3px solid rgb(0, 179, 255);
     }
@@ -805,16 +813,13 @@ footer li {
     
     footer a {
         text-decoration: none;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     
-    footer ul {
+    footer title {
         padding-left: 0;
         margin: 0;
         list-style: none;
-    }
-    
-    footer li {
-        margin-top: 15px;
-        margin-bottom: 15px;
     }
 }
