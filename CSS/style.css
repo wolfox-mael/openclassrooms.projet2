@@ -34,11 +34,12 @@ h3 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 a {
     color: black;
+    font-size: 16px;
 }
 
 ul {
@@ -132,8 +133,8 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     align-content: stretch;
-    border-top: 1px solid #f2f2f2 ;
-    border-bottom: 1px solid #f2f2f2 ;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
     border-radius: 20px;
     border-left: 0;
     border-right: 0;
@@ -314,7 +315,7 @@ header nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 250px 250px;
-    gap: 15px;
+    gap: 30px;
 }
 
 .bloclogements .gauche .logement .infos {
@@ -338,6 +339,24 @@ header nav a:hover {
 .bloclogements .gauche .extend {
     margin: 0;
     margin-top: 20px;
+}
+
+.bloclogements .gauche .logement .infos {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.bloclogements .gauche .logement .infos h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.bloclogements .gauche .logement .infos p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+
 }
 
 /* Bloc de droite */
@@ -367,7 +386,11 @@ header nav a:hover {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 150px 150px 150px;
-    gap: 15px;
+    gap: 50px;
+}
+
+.bloclogements .droite .logement {
+    height: fit-content;
 }
 
 .bloclogements .droite .logement a {
@@ -414,7 +437,7 @@ header nav a:hover {
 .bloclogements .droite img {
     min-width: 120px;
     max-width: 120px;
-    height: 140px;
+    height: 160px;
     object-fit: cover;
     border-radius: 20px 0 0 20px;
 }
@@ -467,19 +490,15 @@ header nav a:hover {
     margin-left: 20px;
 }
 
-footer h2 {
+footer h1 {
     font-weight: 600;
     font-size: 18px;
-}
-
-footer a {
-    font-size: 14px;
+    margin-bottom: 0;
 }
 
 footer {
     background-color: #d9d9d9;
     margin-top: 50px;
-
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -497,7 +516,6 @@ footer .grid {
 footer a {
     text-decoration: none;
     margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 footer .liste {
@@ -727,7 +745,6 @@ footer .liste {
     .bloclogements .gauche .logement .infos .stars {
         padding: 0;
         margin: 0;
-
     }
 
     .bloclogements .droite {
@@ -735,10 +752,28 @@ footer .liste {
         border-radius: 0;
     }
 
+    .bloclogements .droite .logement {
+        
+        position: relative;
+    }
+
+    .bloclogements .droite .logement .infos {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bloclogements .droite .logement .stars {
+        position: absolute;
+        bottom: 10px;
+    }
+
     .bloclogements .droite .grid {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 150px 150px 150px;
+        padding-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .bloclogements .droite img {
@@ -796,11 +831,11 @@ footer .liste {
     footer {
         background-color: #d9d9d9;
         margin-top: 50px;
-    
+
         margin-left: 20px;
         margin-right: 20px;
     }
-    
+
     footer .grid {
         padding-left: 0;
         margin: 0;
@@ -810,13 +845,13 @@ footer .liste {
         margin-left: 20px;
         margin-right: 20px;
     }
-    
+
     footer a {
         text-decoration: none;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 5px;
+        font-size: 16px;
     }
-    
+
     footer title {
         padding-left: 0;
         margin: 0;
